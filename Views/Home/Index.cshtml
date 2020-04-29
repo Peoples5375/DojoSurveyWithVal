@@ -1,0 +1,57 @@
+﻿@model Survey
+<body>
+    <div class="container text-center">
+        <form class="border p-4 mt-5" asp-action="Submission" method="post">
+            <div class="row">
+                <div class="col-md-5 p-3">
+                    <label>Name:</label>
+                    <p><span asp-validation-for="Name" class="error-red"></span></p>
+                </div>
+                <div class="col-md-5 p-3">
+                    <input type="text" class="form-control" asp-for="Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 p-3">
+                    <label>Dojo Location</label>
+                    <p><span asp-validation-for="Location" class="error-red"></span></p>
+                </div>
+                <div class="col-md-5 p-3">
+                    <select class="custom-select col-md-5" id="inlineFormCustomSelectPref" asp-for="Location">
+                    <option value="">Choose...</option>
+                    <option value="Tulsa">Tulsa</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="DC">DC</option>
+                    <option value="California">California</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 p-3">
+                    <label>Favorite Language:</label>
+                    <p><span asp-validation-for="Language" class="error-red"></span></p>
+                </div>
+                    <div class=" col-md-5 p-3">
+                        <select class="custom-select col-md-5" id="inlineFormCustomSelectPref" asp-for="Language">
+                        <option value="">Choose...</option>
+                        <option value="Python">Python</option>
+                        <option value="React">React</option>
+                        <option value="C#">C#</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 p-3">
+                        <label>Comment:</label>
+                        <p><span asp-validation-for="Comment" class="error-red"></span></p>
+                    </div>
+                </div>
+                    <div>
+                        <input type="text" class="form-control" asp-for="Comment">
+                    </div>
+                    <button class="btn btn-primary mt-3" type="submit">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
